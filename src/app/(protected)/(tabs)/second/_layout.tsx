@@ -10,6 +10,9 @@ export default function Layout() {
     <Stack
       screenOptions={{
         animation: pathname.startsWith("/second") ? "default" : "none",
+        headerTitleStyle: {
+          fontFamily: "RampartOne",
+        },
       }}
     >
       <Stack.Screen name="index" options={{ title: "Second Screen" }} />

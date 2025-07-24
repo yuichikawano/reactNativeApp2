@@ -7,7 +7,12 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 export default function TabsLayout() {
   return (
     <Tabs
-      screenOptions={{ tabBarActiveTintColor: "teal" }}
+      screenOptions={{
+        tabBarActiveTintColor: "teal",
+        headerTitleStyle: {
+          fontFamily: "RampartOne",
+        },
+      }}
       backBehavior="order"
     >
       <Tabs.Screen
@@ -16,6 +21,9 @@ export default function TabsLayout() {
           headerShown: false,
           title: "Home",
           tabBarLabel: "Home",
+          tabBarLabelStyle: {
+            fontFamily: "RampartOne",
+          },
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons
               name="numeric-1-box-outline"
@@ -31,6 +39,9 @@ export default function TabsLayout() {
           headerShown: false,
           title: "Second",
           popToTopOnBlur: true,
+          tabBarLabelStyle: {
+            fontFamily: "RampartOne",
+          },
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons
               name="numeric-2-box-outline"
@@ -44,6 +55,9 @@ export default function TabsLayout() {
         name="third"
         options={{
           title: "Third",
+          tabBarLabelStyle: {
+            fontFamily: "RampartOne",
+          },
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons
               name="numeric-3-box-outline"
@@ -61,6 +75,9 @@ export default function TabsLayout() {
           tabBarBadgeStyle: {
             backgroundColor: "black",
             color: "white",
+          },
+          tabBarLabelStyle: {
+            fontFamily: "RampartOne",
           },
           title: "Fourth",
           tabBarIcon: ({ color, size }) => (

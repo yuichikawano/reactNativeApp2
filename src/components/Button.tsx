@@ -22,8 +22,8 @@ export function Button({
       onPress={onPress}
       className={cn(
         "flex-row items-center justify-center rounded-md px-5 py-3 mb-4 border",
-        theme === "primary" && "bg-[#007AFF] border-[#007AFF]",
-        theme === "secondary" && "bg-white border-gray-300",
+        theme === "primary" && "bg-cyan-600 border-cyan-700",
+        theme === "secondary" && "bg-violet-200 border-violet-300",
         theme === "tertiary" && "bg-transparent border-transparent",
         disabled && "opacity-50",
       )}
@@ -34,9 +34,12 @@ export function Button({
         className={cn(
           "font-semibold text-lg tracking-wider",
           theme === "secondary" && "text-black",
-          theme === "primary" && "text-white",
+          theme === "primary" && "text-b",
           theme === "tertiary" && "text-gray-800",
         )}
+        style={{
+          fontFamily: "RampartOne",
+        }}
       >
         {title} {disabled}
       </Text>

@@ -15,7 +15,13 @@ export default function ProtectedLayout() {
     return <Redirect href="/login" />;
   }
   return (
-    <Stack>
+    <Stack
+      screenOptions={{
+        headerTitleStyle: {
+          fontFamily: "RampartOne",
+        },
+      }}
+    >
       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
       <Stack.Screen
         name="modal"
