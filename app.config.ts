@@ -65,6 +65,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
         fonts: ["./assets/fonts/WDXLLubrifontJPN-Regular.ttf"],
       },
     ],
+    ["expo-asset", { assets: ["./assets/images/room.jpeg"] }],
   ],
   extra: {
     router: {},
