@@ -53,8 +53,12 @@ eas -v
 eas login
 ```
 
-
 ### easプロジェクトの作成
 ```zsh
 eas init
+```
+
+### easプロジェクトの構成要素作成
+```zsh
+eas build:configure
 ```
