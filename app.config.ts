@@ -1,0 +1,43 @@
+import { ConfigContext, ExpoConfig } from "expo/config";
+
+export default ({ config }: ConfigContext): ExpoConfig => ({
+  ...config,
+  name: "reactNativeApp2",
+  slug: "reactNativeApp2",
+  scheme: "expo-starter",
+  version: "1.0.0",
+  orientation: "portrait",
+  icon: "./assets/icon.png",
+  userInterfaceStyle: "light",
+  newArchEnabled: true,
+  splash: {
+    image: "./assets/splash-icon.png",
+    resizeMode: "contain",
+    backgroundColor: "#ffffff",
+  },
+  ios: {
+    supportsTablet: true,
+    bundleIdentifier: "y",
+    infoPlist: {
+      ITSAppUsesNonExemptEncryption: false,
+    },
+  },
+  android: {
+    adaptiveIcon: {
+      foregroundImage: "./assets/adaptive-icon.png",
+      backgroundColor: "#ffffff",
+    },
+    package: "com.yuichi_kawano.reactNativeApp2",
+  },
+  web: {
+    favicon: "./assets/favicon.png",
+  },
+  plugins: ["expo-router"],
+  extra: {
+    router: {},
+    eas: {
+      projectId: "c3ef1606-afa6-438e-9a06-f388dad72c40",
+    },
+  },
+  owner: "yuichi_kawano",
+});

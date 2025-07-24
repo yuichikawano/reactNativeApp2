@@ -91,8 +91,14 @@ eas.json
    }
  },
 ```
-### iOSアプリの開発ビルドを実行
+### iOSアプリのシミュレーター用開発ビルドを実行
 
 ```zsh
 eas build --platform ios --profile ios-simulator
 ```
+
+
+### **iOSアプリのデバイス用開発ビルドはApple developer programが必要なので一旦保留**
+
+### 複数のビルドタイプを構成する(開発用・プレビュー用・本番用)
+
