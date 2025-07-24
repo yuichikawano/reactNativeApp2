@@ -27,6 +27,13 @@
     },
     "plugins": [
       "expo-router"
-    ]
+    ],
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "c3ef1606-afa6-438e-9a06-f388dad72c40"
+      }
+    },
+    "owner": "yuichi_kawano"
   }
 }
