@@ -67,4 +67,7 @@ eas build:configure
 ```zsh
 eas build --platform android --profile development
 ```
-ビルドが完了したら、[expo.dev](https://expo.dev/)に移動し、開発者ビルドを確認しエミュレータや実機で確認することができます。
+ビルドが完了したら、[expo.dev](https://expo.dev/)に移動し、開発者ビルドを確認しエミュレータや実機で確認することができます。\
+実機での動作確認を行う場合は、USB接続でorbitを使用するか、QRコードをスキャンするかどちらでも行うことができます。\
+ネイティブコードが変更されない限りは、開発者ビルドで確認することができます。\
+JavaScriptコードが変更されるだけであれば、実機でそのまま確認することができます。

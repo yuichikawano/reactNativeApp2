@@ -35,7 +35,7 @@ export default function IndexScreen() {
     <View className="justify-center flex-1 p-4">
       <AppText center>Index Screen</AppText>
       <Link href={"/home-nested"} push asChild>
-        <Button title="push to /home-nested" />
+        <Button title="入れ子HOMEスクリーン" />
       </Link>
       {canGoBack ? (
         <Button
