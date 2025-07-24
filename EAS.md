@@ -111,12 +111,16 @@ developmentの開発ビルドを起動
 npm run dev
 ```
 
-previewの開発ビルドを起動
+previewの開発ビルドを起動(Android用)
 ```zsh
-npm run preview
+eas build --platform android --profile preview
 ```
 
 productionの開発ビルドを起動
 ```zsh
 npm run start:prod
+```
+### 社内配布ビルドを作成
+```zsh
+eas build --platform android --profile preview
 ```
