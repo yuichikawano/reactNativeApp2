@@ -67,3 +67,4 @@ eas build:configure
 ```zsh
 eas build --platform android --profile development
 ```
+ビルドが完了したら、[expo.dev](https://expo.dev/)に移動し、開発者ビルドを確認しエミュレータや実機で確認することができます。
