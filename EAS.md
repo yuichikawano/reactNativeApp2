@@ -63,7 +63,15 @@ eas init
 eas build:configure
 ```
 
-### Androidアプリの開発ビルドを実行
+### Androidアプリのシミュレーター＆実機用開発ビルドを実行
+```text
+eas.json
+"development": {
+   "developmentClient": true,
+   "distribution": "internal",
+   "node": "20.14.0"
+},
+```
 ```zsh
 eas build --platform android --profile development
 ```
@@ -71,3 +79,20 @@ eas build --platform android --profile development
 実機での動作確認を行う場合は、USB接続でorbitを使用するか、QRコードをスキャンするかどちらでも行うことができます。\
 ネイティブコードが変更されない限りは、開発者ビルドで確認することができます。\
 JavaScriptコードが変更されるだけであれば、実機でそのまま確認することができます。
+
+### iOSアプリのシミュレーター用開発ビルド
+iOSシミュレータの開発ビルドは、iOSデバイス(.ipa形式)とは異なる.app形式で生成されます。
+```text
+eas.json
+"ios-simulator": {
+   "extends": "development",
+   "ios": {
+     "simulator": true
+   }
+ },
+```
+### iOSアプリの開発ビルドを実行
+
+```zsh
+eas build --platform ios --profile ios-simulator
+```
