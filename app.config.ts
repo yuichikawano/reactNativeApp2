@@ -1,8 +1,33 @@
 import { ConfigContext, ExpoConfig } from "expo/config";
+const IS_DEV = process.env.APP_VARIANT === "development";
+const IS_PREVIEW = process.env.APP_VARIANT === "preview";
+const getUniqueIdentifier = () => {
+  if (IS_DEV) {
+    return "com.yuichikawano.reactnativeapp2.dev";
+  }
+
+  if (IS_PREVIEW) {
+    return "com.yuichikawano.reactnativeapp2.preview";
+  }
+
+  return "com.yuichikawano.reactnativeapp2";
+};
+
+const getAppName = () => {
+  if (IS_DEV) {
+    return "reactNativeApp2(Dev)";
+  }
+
+  if (IS_PREVIEW) {
+    return "reactNativeApp2(Preview)";
+  }
+
+  return "reactNativeApp2";
+};
 
 export default ({ config }: ConfigContext): ExpoConfig => ({
   ...config,
-  name: "reactNativeApp2",
+  name: getAppName(),
   slug: "reactNativeApp2",
   scheme: "expo-starter",
   version: "1.0.0",
@@ -17,7 +42,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   },
   ios: {
     supportsTablet: true,
-    bundleIdentifier: "y",
+    bundleIdentifier: getUniqueIdentifier(),
     infoPlist: {
       ITSAppUsesNonExemptEncryption: false,
     },
@@ -27,7 +52,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
       foregroundImage: "./assets/adaptive-icon.png",
       backgroundColor: "#ffffff",
     },
-    package: "com.yuichi_kawano.reactNativeApp2",
+    package: getUniqueIdentifier(),
   },
   web: {
     favicon: "./assets/favicon.png",

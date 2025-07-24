@@ -102,3 +102,21 @@ eas build --platform ios --profile ios-simulator
 
 ### 複数のビルドタイプを構成する(開発用・プレビュー用・本番用)
 
+```zsh
+eas build --profile development
+```
+
+developmentの開発ビルドを起動
+```zsh
+npm run dev
+```
+
+previewの開発ビルドを起動
+```zsh
+npm run preview
+```
+
+productionの開発ビルドを起動
+```zsh
+npm run start:prod
+```
