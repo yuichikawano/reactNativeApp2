@@ -1,4 +1,7 @@
-# AuthAppの概要
+# ReactNativeApp2の概要
+
+## 概要
+EASのチュートリアルをやるプロジェクトです
 
 #### create project
 ```zsh
