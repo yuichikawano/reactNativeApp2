@@ -62,3 +62,8 @@ eas init
 ```zsh
 eas build:configure
 ```
+
+### Androidアプリの開発ビルドを実行
+```zsh
+eas build --platform android --profile development
+```

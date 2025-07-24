@@ -20,7 +20,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.yuichi_kawano.reactNativeApp2"
     },
     "web": {
       "favicon": "./assets/favicon.png"
